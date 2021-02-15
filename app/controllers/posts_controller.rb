@@ -6,8 +6,8 @@ class PostsController < ApplicationController
 
 
   def create
-    Post.create(content: params[:content])
-    redirecto_to action: index
+    post = Post.create(content: params[:content], checke: false)
+    render json:{ post: post }
   end
 
   def checked 
