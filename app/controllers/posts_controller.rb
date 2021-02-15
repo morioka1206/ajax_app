@@ -10,12 +10,12 @@ class PostsController < ApplicationController
     redirecto_to action: index
   end
 
-  def checked
+  def checked 
     post = Post.find(params[:id])
     if post.checked
       post.update(checked: false)
     else
-      post.update(checkde: true)
+      post.update(checked: true)
     end
 
     item = Post.find(params[:id])
